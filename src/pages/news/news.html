@@ -1,0 +1,14 @@
+<ion-header [innerHTML]="AppInit.header" class='bgHeader'>
+
+</ion-header>
+
+
+<ion-content padding class='bgContent'>
+  <ion-card *ngFor="let post of posts" (click)="OpenSingleNew(post.id)">
+    <ion-card-header>
+       {{post.title.rendered}}
+    </ion-card-header>
+    <ion-card-content [innerHTML]="post.content.rendered">
+    </ion-card-content>
+  </ion-card>
+</ion-content>
