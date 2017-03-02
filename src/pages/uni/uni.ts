@@ -4,12 +4,8 @@ import { MentoringPage } from '../mentoring/mentoring';
 import { SchedulePage } from '../schedule/schedule';
 import { TicPage } from '../tic/tic';
 import { AppInit } from '../../providers/app-init';
-/*
-  Generated class for the Uni page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+
 @Component({
   selector: 'page-uni',
   templateUrl: 'uni.html'

@@ -2,10 +2,7 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
 /*
-  Generated class for the AppInit provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
+  Proveedor de variables básicas de la app: Logotipo, Idioma predefinido, carrera del usuario...
 */
 @Injectable()
 export class AppInit {

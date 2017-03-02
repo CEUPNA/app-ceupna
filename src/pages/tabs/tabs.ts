@@ -9,8 +9,7 @@ import { AlertsPage } from '../alerts/alerts';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  // this tells the tabs component which Pages
-  // should be each tab's root Page
+  // Definimos las páginas de cada variable
   news: any = NewsPage;
   ceupna: any = CeupnaPage;
   uni: any = UniPage;
