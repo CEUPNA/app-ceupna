@@ -14,8 +14,9 @@ export class TabsPage {
   ceupna: any = CeupnaPage;
   uni: any = UniPage;
   alerts: any = AlertsPage;
-
+  valueforngif=true;
   constructor() {
 
   }
+
 }
