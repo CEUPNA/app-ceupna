@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CeupnaPage } from '../ceupna/ceupna';
 import { AppInit } from '../../providers/app-init';
 
 
@@ -10,6 +11,8 @@ import { AppInit } from '../../providers/app-init';
 export class NotesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit) {}
-
+  OpenCeupna(){
+    this.navCtrl.push(CeupnaPage);
+  }
 
 }

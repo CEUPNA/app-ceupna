@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
+import { CeupnaPage } from '../ceupna/ceupna';
 import { TranslateService } from 'ng2-translate';
 
 
@@ -11,6 +12,10 @@ import { TranslateService } from 'ng2-translate';
 export class ComplaintsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit) {}
+
+  OpenCeupna(){
+    this.navCtrl.push(CeupnaPage);
+  }
 
 
 }
