@@ -1,8 +1,20 @@
 {
-  "HELLO": "Kaixo!",
+  "HELLO": "Kaixo",
   "IDIOMA": "Hizkuntza",
-  "NOMBRE": "Izena",
-  "NOTICIAS": "Notiziak",
-  "ALERTAS": "ALERTAK",
-  "UNIVERSIDAD": "UNIBERTSITATEA"
+  "SEND": "Bidali",
+  "NAME": "Izena",
+  "COMPLAINT": "Kexa",
+  "COMPLAINTS": "Kexak",
+  "MAIL": "E-mail",
+  "OUR SOCIAL NETWORKS": "Gure sare sozialak",
+  "LOCALIZACION": "Non gaude?",
+  "DESC_LOCALIZACION": "Dira ikasgelan 07 edo honako bide hauen bitartez ditugu:",
+  "NOTICIAS": "Berriak",
+  "UNIVERSIDAD": "Unibertsitatea",
+  "ALERTAS": "Alertak",
+  "NOTES": "Notak",
+  "CONTACT": "Kontaktuak",
+  "MENTORING": "Tutoretzak",
+  "TIC": "TIC Informazioa",
+  "SCHEDULE": "Egunkari"
 }

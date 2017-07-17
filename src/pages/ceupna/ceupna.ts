@@ -4,6 +4,8 @@ import { NotesPage } from '../notes/notes';
 import { ComplaintsPage } from '../complaints/complaints';
 import { ContactPage } from '../contact/contact';
 import { AppInit } from '../../providers/app-init';
+import { TranslateService } from 'ng2-translate';
+
 
 
 @Component({

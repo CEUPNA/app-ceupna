@@ -11,5 +11,11 @@
   "DESC_LOCALIZACION": "Nos encontramos en el aula 07 o a través de los siguientes canales:",
   "NOTICIAS": "NOTICIAS",
   "UNIVERSIDAD": "UNIVERSIDAD",
-  "ALERTAS": "ALERTAS"
+  "ALERTAS": "ALERTAS",
+  "NOTES": "Apuntes",
+  "CONTACT": "Contacto",
+  "MENTORING": "Tutorías",
+  "TIC": "Información TIC",
+  "SCHEDULE": "Agenda"
+
 }

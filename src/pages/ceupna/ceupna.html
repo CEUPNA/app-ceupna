@@ -4,7 +4,7 @@
 <ion-content padding class='bgContent'>
   <ion-card (click)="OpenNotes()">
     <ion-card-header>
-     Apuntes
+     {{ "NOTES" | translate}}
     </ion-card-header>
     <ion-card-content>
       <!-- Add card content here! -->
@@ -12,7 +12,7 @@
   </ion-card>
   <ion-card (click)="OpenComplaints()">
     <ion-card-header>
-    Quejas, sugerencias...
+    {{ "COMPLAINTS" | translate}}
     </ion-card-header>
     <ion-card-content>
       <!-- Add card content here! -->
@@ -20,7 +20,7 @@
   </ion-card>
   <ion-card (click)="OpenContact()">
     <ion-card-header>
-      Contacto
+      {{ "CONTACT" | translate}}
     </ion-card-header>
     <ion-card-content>
       <!-- Add card content here! -->

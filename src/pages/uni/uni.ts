@@ -4,6 +4,8 @@ import { MentoringPage } from '../mentoring/mentoring';
 import { SchedulePage } from '../schedule/schedule';
 import { TicPage } from '../tic/tic';
 import { AppInit } from '../../providers/app-init';
+import { TranslateService } from 'ng2-translate';
+
 
 
 @Component({
