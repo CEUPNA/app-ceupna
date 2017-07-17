@@ -9,6 +9,9 @@ ion-app._gmaps_cdv_ .nav-decor{
 .contact-paragraph{
   text-align: center;
 }
+.contact-paragraph > a {
+  text-decoration: none;
+}
 .contact-paragraph > a > ion-icon{
   font-size: 25px;
 }
