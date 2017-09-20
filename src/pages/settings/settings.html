@@ -7,6 +7,7 @@
 <ion-list>
   <ion-item>
     <ion-label>{{ "IDIOMA" | translate }}</ion-label>
+    {{lenguage}}
     <ion-select [(ngModel)]="language" (ionChange)="changeLanguage(language)">
       <ion-option value="es" selected>Español</ion-option>
       <ion-option value="eus">Euskara</ion-option>

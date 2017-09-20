@@ -18,8 +18,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { MentoringPage } from '../pages/mentoring/mentoring';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { TicPage } from '../pages/tic/tic';
+import { TicsPage } from '../pages/ticpage/ticpage';
 import { SettingsPage } from '../pages/settings/settings';
 import { NewPage } from '../pages/new/new';
+import { Storage } from '@ionic/storage';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { NewPage } from '../pages/new/new';
     SchedulePage,
     TicPage,
     SettingsPage,
-    NewPage
+    NewPage,
+    TicsPage
 
   ],
   imports: [
@@ -63,9 +66,10 @@ import { NewPage } from '../pages/new/new';
     SchedulePage,
     TicPage,
     SettingsPage,
-    NewPage
+    NewPage,
+    TicsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
 export class AppModule {}
 export function createTranslateLoader(http: Http) {

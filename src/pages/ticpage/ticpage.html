@@ -1,0 +1,12 @@
+<ion-header class='bgHeader'>
+  <ion-icon (click)="OpenTIC()" style="float:left;font-size: 35px;color:white;padding: 10px;"name="arrow-back"></ion-icon>
+  <img src="{{AppInit.headerimg}}">
+</ion-header>
+
+
+<ion-content padding class='bgContent'>
+<h3 [innerHTML]='name' style="width: 85%;float: right;text-align: center;"></h3>
+<img style="max-width: 15%;float: left;padding-bottom:15px;" src="{{icon}}">
+<p [innerHTML]='description' style="display:inline-block"></p>
+<a style="display:inline-block" href="{{enlace}}">{{ "MORE INFO IN WEBSITE" | translate }}</a>
+</ion-content>
