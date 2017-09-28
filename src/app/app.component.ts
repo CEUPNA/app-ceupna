@@ -3,9 +3,9 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { TranslateService } from 'ng2-translate';
 
-
 import { TabsPage } from '../pages/tabs/tabs';
-import { AppInit } from '../providers/app-init'
+import { AppInit } from '../providers/app-init';
+
 
 @Component({
   templateUrl: 'app.html',
@@ -21,6 +21,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
-    });
-  }
+
+
+  });
+}
 }

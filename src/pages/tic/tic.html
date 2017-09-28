@@ -6,6 +6,7 @@
 
 <ion-content padding class='bgContent'>
   <ion-card *ngFor="let recurso of recursos" (click)="OpenSingleTic(recurso.id)">
+
     <ion-card-content>
       <p style="max-width: 60%;float: right;">{{recurso.name}}</p>
       <img style="max-width: 15%;float: left;padding-bottom:15px;" src="{{recurso.icon}}">

@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { UniPage } from '../uni/uni';
+import { mentSelectSubjectPage } from '../mentSelectSubject/mentSelectSubject';
+import { mentResultsPage } from '../mentResultsPage/mentResultsPage';
 import { AppInit } from '../../providers/app-init';
+import { UniPage } from '../uni/uni';
+import { Http } from '@angular/http';
+
 
 
 @Component({
@@ -9,8 +13,26 @@ import { AppInit } from '../../providers/app-init';
   templateUrl: 'mentoring.html'
 })
 export class MentoringPage {
+grados:any;
+grado:any;
+busqueda = "";
+placeholder = "Busca a tu profesor";
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: Http) {
+  this.http.get('http://'+AppInit.api+'/degrees/').map(res => res.json()).subscribe(data => {
+       this.grados = data;
+       console.log(data);
+  });
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit) {}
+  }
+  onChange(){
+  console.log(this.grado);
+  this.navCtrl.push(mentSelectSubjectPage, {grado: this.grado});
+  }
+
+  onInput($event){
+  console.log($event.srcElement.value);
+  this.navCtrl.push(mentResultsPage, {search: $event.srcElement.value});
+  }
  OpenUni(){
    this.navCtrl.push(UniPage);
  }

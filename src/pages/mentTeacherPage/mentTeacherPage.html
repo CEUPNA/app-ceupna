@@ -1,0 +1,12 @@
+<ion-header class='bgHeader'>
+  <ion-icon (click)="OpenMentPage()" style="float:left;font-size: 35px;color:white;padding: 10px;"name="arrow-back"></ion-icon>
+        <img src="{{AppInit.headerimg}}">
+</ion-header>
+
+
+<ion-content padding class='bgContent'>
+<p>{{name}}</p>
+<p>{{email}}</p>
+<p [innerHTML]="timetable"></p>
+<p>{{web}}</p>
+</ion-content>

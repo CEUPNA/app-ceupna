@@ -1,0 +1,12 @@
+<ion-header class='bgHeader'>
+        <img src="{{AppInit.headerimg}}">
+</ion-header>
+
+
+<ion-content padding class='bgContent'>
+<ion-card *ngFor="let subject of subjects" (click)="OpenSingleSubject(subject.id)">
+  <ion-card-header>
+     {{subject.name}}
+  </ion-card-header>
+</ion-card>
+</ion-content>

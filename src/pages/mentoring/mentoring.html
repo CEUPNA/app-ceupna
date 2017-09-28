@@ -5,5 +5,17 @@
 
 
 <ion-content padding class='bgContent'>
-
+  <ion-searchbar
+    [(ngModel)]="busqueda"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)"
+    placeholder="Buscar profesor">
+  </ion-searchbar>
+    <p>O selecciona tu grado</p>
+<ion-item>
+      <ion-select [(ngModel)]="grado" (ngModelChange)="onChange()" style="min-width: 100%;">
+        <ion-option  *ngFor="let uni of grados" [value]="uni.upna_id" >{{uni.name.es}}</ion-option>
+      </ion-select>
+    </ion-item>
 </ion-content>

@@ -1,0 +1,13 @@
+<ion-header class='bgHeader'>
+        <img src="{{AppInit.headerimg}}">
+</ion-header>
+
+
+<ion-content padding class='bgContent'>
+  RESULTADOS:
+  <ion-card *ngFor="let profesor of resultado" (click)="OpenTeacher(profesor.id)">
+    <ion-card-content>
+      {{profesor.name}}
+      </ion-card-content>
+    </ion-card>
+</ion-content>

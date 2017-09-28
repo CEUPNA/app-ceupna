@@ -20,8 +20,13 @@ import { SchedulePage } from '../pages/schedule/schedule';
 import { TicPage } from '../pages/tic/tic';
 import { TicsPage } from '../pages/ticpage/ticpage';
 import { SettingsPage } from '../pages/settings/settings';
+import { mentSelectSubjectPage } from '../pages/mentSelectSubject/mentSelectSubject';
+import { mentResultsPage } from '../pages/mentResultsPage/mentResultsPage';
+import { mentTeacherPage } from '../pages/mentTeacherPage/mentTeacherPage';
+import { mentSingleSubject } from '../pages/mentSingleSubject/mentSingleSubject';
 import { NewPage } from '../pages/new/new';
 import { Storage } from '@ionic/storage';
+import { NgCalendarModule } from 'ionic2-calendar';
 
 
 @NgModule({
@@ -40,11 +45,16 @@ import { Storage } from '@ionic/storage';
     TicPage,
     SettingsPage,
     NewPage,
-    TicsPage
+    TicsPage,
+    mentSelectSubjectPage,
+    mentResultsPage,
+    mentTeacherPage,
+    mentSingleSubject
 
   ],
   imports: [
      IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom'}),
+     NgCalendarModule,
      TranslateModule.forRoot({
        provide: TranslateLoader,
        useFactory: (createTranslateLoader),
@@ -67,7 +77,11 @@ import { Storage } from '@ionic/storage';
     TicPage,
     SettingsPage,
     NewPage,
-    TicsPage
+    TicsPage,
+    mentSelectSubjectPage,
+    mentResultsPage,
+    mentTeacherPage,
+    mentSingleSubject
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
