@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
 import { CeupnaPage } from '../ceupna/ceupna';
-import { GoogleMap } from 'ionic-native';
+/*import { GoogleMap } from 'ionic-native';*/
 
 declare var google;
 

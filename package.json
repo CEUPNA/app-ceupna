@@ -28,6 +28,7 @@
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-console": "1.0.5",
         "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-googlemaps": "^2.0.11",
         "cordova-plugin-splashscreen": "~4.0.1",
         "cordova-plugin-statusbar": "2.2.1",
         "cordova-plugin-whitelist": "1.3.1",
@@ -39,6 +40,7 @@
         "ionicons": "3.0.0",
         "moment": "^2.18.1",
         "ng2-translate": "^5.0.0",
+        "onesignal-cordova-plugin": "^2.2.1",
         "rxjs": "5.0.0-beta.12",
         "sw-toolbox": "3.4.0",
         "zone.js": "0.6.26"
@@ -65,7 +67,10 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-googlemaps": {
+                "API_KEY_FOR_ANDROID": "AIzaSyCrBpR6i5MQAcA370Vyu9UdkGzvR_rQ86E"
+            }
         },
         "platforms": [
             "android"
