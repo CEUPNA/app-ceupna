@@ -11,13 +11,13 @@ declare var google;
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-/*Iniciamos el mapa*/
- map: GoogleMap;
+/*Iniciamos el mapa
+ map: GoogleMap;*/
   constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit,private platform:Platform) {
     this.platform = platform;
-		this.initializeMap(); //Cuando esté cargado, inicializamos el mapa
+		//this.initializeMap(); //Cuando esté cargado, inicializamos el mapa
      }
-     initializeMap() {
+     /*initializeMap() {
 
 		this.platform.ready().then(() => { //Definimos las variables del mapa
 		    var minZoomLevel = 17;
@@ -27,7 +27,7 @@ export class ContactPage {
 		        mapTypeId: google.maps.MapTypeId.ROADMAP
 		    });
 		});
-	}
+	}*/
 
   OpenCeupna(){
     this.navCtrl.push(CeupnaPage);
