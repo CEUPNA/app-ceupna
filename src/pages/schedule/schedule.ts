@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { UniPage } from '../uni/uni';
 import { AppInit } from '../../providers/app-init';
-
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-schedule',
@@ -20,10 +20,12 @@ calendar = {
     currentDate: new Date()
 }; // these are the variable used by the calendar.
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit) {}
-  loadEvents() {
-          this.eventSource = this.createRandomEvents();
-      }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: Http) {
+  this.eventSource = this.loadEvents(AppInit)
+  console.log("events source->",this.eventSource);
+  this.onTimeSelected(new Date());
+  }
+
       onViewTitleChanged(title) {
           this.viewTitle = title;
       }
@@ -47,41 +49,23 @@ calendar = {
           event.setHours(0, 0, 0, 0);
           this.isToday = today.getTime() === event.getTime();
       }
-      createRandomEvents() {
-          var events = [];
-          for (var i = 0; i < 50; i += 1) {
-              var date = new Date();
-              var eventType = Math.floor(Math.random() * 2);
-              var startDay = Math.floor(Math.random() * 90) - 45;
-              var endDay = Math.floor(Math.random() * 2) + startDay;
-              var startTime;
-              var endTime;
-              if (eventType === 0) {
-                  startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
-                  if (endDay === startDay) {
-                      endDay += 1;
-                  }
-                  endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
-                  events.push({
-                      title: 'All Day - ' + i,
-                      startTime: startTime,
-                      endTime: endTime,
-                      allDay: true
-                  });
-              } else {
-                  var startMinute = Math.floor(Math.random() * 24 * 60);
-                  var endMinute = Math.floor(Math.random() * 180) + startMinute;
-                  startTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + startDay, 0, date.getMinutes() + startMinute);
-                  endTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + endDay, 0, date.getMinutes() + endMinute);
-                  events.push({
-                      title: 'Event - ' + i,
-                      startTime: startTime,
-                      endTime: endTime,
-                      allDay: false
-                  });
-              }
-          }
-          return events;
+      loadEvents(AppInit){
+      var i = 0;
+      var events = [];
+      this.http.get('http://'+AppInit.api+'/events/').map(res => res.json()).subscribe(data => {
+           for (i = 0; i < data.length ; i++) {
+          events.push({
+           title: data[i].name,
+           startTime: new Date(data[i].begin_date),
+           endTime: new Date(data[i].end_date),
+           allDay: false
+           });
+           }
+      });
+
+      this.eventSource = events;
+      console.log("dentro function",this.eventSource)
+      return events;
       }
       onRangeChanged(ev) {
           console.log('range changed: startTime: ' + ev.startTime + ', endTime: ' + ev.endTime);

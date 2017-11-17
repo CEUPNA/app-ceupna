@@ -1,0 +1,47 @@
+<ion-header class='bgHeader'>
+  <ion-icon (click)="OpenUni()" style="float:left;font-size: 35px;color:white;padding: 10px;"name="arrow-back"></ion-icon>
+  <img src="{{AppInit.headerimg}}">
+
+  <ion-toolbar no-border-top>
+  <ion-segment [(ngModel)]="campus">
+    <ion-segment-button value="arrosadia">
+       {{ "ARROSADIA" | translate}}
+    </ion-segment-button>
+    <ion-segment-button value="salud">
+       {{ "HEALTH" | translate}}
+    </ion-segment-button>
+    <ion-segment-button value="tudela">
+       {{ "TUDELA" | translate}}
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding class='bgContent'>
+
+  <div [ngSwitch]="campus">
+      <ion-list *ngSwitchCase="'arrosadia'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-puppy-1.jpg">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'salud'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-kitten-1.jpg">
+          </ion-thumbnail>
+          <h2>Luna</h2>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'tudela'">
+        <ion-item>
+            <img src="https://www.arasa.es/wp-content/uploads/2017/10/l220upnatudela.gif">
+        </ion-item>
+      </ion-list>
+    </div>
+</ion-content>

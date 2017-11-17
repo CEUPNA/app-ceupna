@@ -27,6 +27,7 @@ import { mentSingleSubject } from '../pages/mentSingleSubject/mentSingleSubject'
 import { NewPage } from '../pages/new/new';
 import { Storage } from '@ionic/storage';
 import { NgCalendarModule } from 'ionic2-calendar';
+import { TransportPage } from '../pages/transport/transport';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     mentSelectSubjectPage,
     mentResultsPage,
     mentTeacherPage,
-    mentSingleSubject
+    mentSingleSubject,
+    TransportPage
 
   ],
   imports: [
@@ -81,7 +83,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     mentSelectSubjectPage,
     mentResultsPage,
     mentTeacherPage,
-    mentSingleSubject
+    mentSingleSubject,
+    TransportPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })

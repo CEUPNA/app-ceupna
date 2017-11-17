@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MentoringPage } from '../mentoring/mentoring';
 import { SchedulePage } from '../schedule/schedule';
+import { TransportPage } from '../transport/transport';
 import { TicPage } from '../tic/tic';
 import { AppInit } from '../../providers/app-init';
 import { TranslateService } from 'ng2-translate';
@@ -23,6 +24,9 @@ export class UniPage {
   }
   OpenSchedule(){
   this.navCtrl.push(SchedulePage);
+  }
+  OpenTransport(){
+  this.navCtrl.push(TransportPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad UniPage');
