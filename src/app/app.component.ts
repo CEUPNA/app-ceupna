@@ -22,14 +22,14 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
 
-      /*var notificationOpenedCallback = function(jsonData) {
+      var notificationOpenedCallback = function(jsonData) {
      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
    };
 
   window["plugins"].OneSignal
      .startInit("8a71e292-867e-4182-bde0-74f2e4f0f2bf", "942113692601")
      .handleNotificationOpened(notificationOpenedCallback)
-     .endInit();*/
+     .endInit();
    });
 }
 }
