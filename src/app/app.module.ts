@@ -28,7 +28,7 @@ import { NewPage } from '../pages/new/new';
 import { Storage } from '@ionic/storage';
 import { NgCalendarModule } from 'ionic2-calendar';
 import { TransportPage } from '../pages/transport/transport';
-
+import { ParadaPage } from '../pages/parada/parada';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import { TransportPage } from '../pages/transport/transport';
     mentResultsPage,
     mentTeacherPage,
     mentSingleSubject,
-    TransportPage
+    TransportPage,
+    ParadaPage
 
   ],
   imports: [
@@ -84,7 +85,8 @@ import { TransportPage } from '../pages/transport/transport';
     mentResultsPage,
     mentTeacherPage,
     mentSingleSubject,
-    TransportPage
+    TransportPage,
+    ParadaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })

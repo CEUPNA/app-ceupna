@@ -1,5 +1,5 @@
 <ion-header class='bgHeader'>
-  <ion-icon (click)="OpenUni()" style="float:left;font-size: 35px;color:white;padding: 10px;"name="arrow-back"></ion-icon>
+  <ion-icon (click)="OpenTransport()" style="float:left;font-size: 35px;color:white;padding: 10px;"name="arrow-back"></ion-icon>
   <img src="{{AppInit.headerimg}}">
 
   <ion-toolbar no-border-top>
@@ -22,19 +22,28 @@
   <div [ngSwitch]="campus">
       <ion-list *ngSwitchCase="'arrosadia'">
         <ion-item>
-          <ion-thumbnail item-start>
-            <img src="assets/img/thumbnail-puppy-1.jpg">
-          </ion-thumbnail>
-          <h2>Ruby</h2>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=18">Aulario dirección Pamplona-Zizur (L1, 6 y 9)</a>
+        </ion-item>
+        <ion-item>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=556">Sario dirección Ezkaba (L11)</a>
+        </ion-item>
+        <ion-item>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=161">Sario dirección P.Multiva - Morea (L11)</a>
+        </ion-item>
+        <ion-item>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=461">Enfrente del Sario dirección La Morea (L11)</a>
         </ion-item>
       </ion-list>
 
       <ion-list *ngSwitchCase="'salud'">
         <ion-item>
-          <ion-thumbnail item-start>
-            <img src="assets/img/thumbnail-kitten-1.jpg">
-          </ion-thumbnail>
-          <h2>Luna</h2>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=119">Avenida Barañain dirección Villava-Huarte (L4 y 7)</a>
+        </ion-item>
+        <ion-item>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=106">Avenida Barañain dirección Barañain (L4 y 7)</a>
+        </ion-item>
+        <ion-item>
+          <a href="https://infotuc.es/visor/v1/todasllegadas.php?parada=205">Avenida Barañain dirección Villava - Monjardín (L 7 y 19)</a>
         </ion-item>
       </ion-list>
 
