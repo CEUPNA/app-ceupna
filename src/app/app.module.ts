@@ -1,11 +1,12 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import {
-  TranslateModule,
-  TranslateStaticLoader,
-  TranslateLoader } from 'ng2-translate/ng2-translate';
-import {Http} from '@angular/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { IonicStorageModule } from '@ionic/storage';
 import 'rxjs/add/operator/map';
+
 import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NewsPage } from '../pages/news/news';
@@ -25,8 +26,6 @@ import { mentResultsPage } from '../pages/mentResultsPage/mentResultsPage';
 import { mentTeacherPage } from '../pages/mentTeacherPage/mentTeacherPage';
 import { mentSingleSubject } from '../pages/mentSingleSubject/mentSingleSubject';
 import { NewPage } from '../pages/new/new';
-import { Storage } from '@ionic/storage';
-import { NgCalendarModule } from 'ionic2-calendar';
 import { TransportPage } from '../pages/transport/transport';
 import { ParadaPage } from '../pages/parada/parada';
 
@@ -56,13 +55,17 @@ import { ParadaPage } from '../pages/parada/parada';
 
   ],
   imports: [
-     IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom'}),
-     NgCalendarModule,
-     TranslateModule.forRoot({
-       provide: TranslateLoader,
-       useFactory: (createTranslateLoader),
-       deps: [Http]
-    })
+    BrowserModule,
+    HttpClientModule,
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom'}),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -90,7 +93,9 @@ import { ParadaPage } from '../pages/parada/parada';
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
+
 export class AppModule {}
-export function createTranslateLoader(http: Http) {
-  return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

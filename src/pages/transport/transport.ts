@@ -3,20 +3,23 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
 import { UniPage } from '../uni/uni';
 import { ParadaPage } from '../parada/parada';
-import { Http } from '@angular/http';
-
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
   selector: 'page-transport',
   templateUrl: 'transport.html'
 })
+
 export class TransportPage {
-campus:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: Http) {
-this.campus="arrosadia";
+
+  campus:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: HttpClient) {
+    this.campus="arrosadia";
   }
+
   OpenUni(){
   this.navCtrl.push(UniPage);
   }
-  }
+
+}

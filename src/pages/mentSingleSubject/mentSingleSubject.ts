@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { MentoringPage } from '../mentoring/mentoring';
 import { mentTeacherPage } from '../mentTeacherPage/mentTeacherPage';
 
@@ -12,13 +12,13 @@ import { mentTeacherPage } from '../mentTeacherPage/mentTeacherPage';
 export class mentSingleSubject {
 subject: any;
 teachers: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit,  public http: Http) {
-  this.subject = navParams.get("subject");
-  this.http.get('http://'+AppInit.api+'/teachers/?format=json&subject_id=' + this.subject + '').map(res => res.json()).subscribe(data => {
-       this.teachers = data;
-
-  });
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit,  public http: HttpClient) {
+    this.subject = navParams.get("subject");
+    this.http.get('http://'+AppInit.api+'/teachers/?format=json&subject_id=' + this.subject + '').subscribe(data => {
+         this.teachers = data;
+    });
   }
+
   OpenMentPage(){
     this.navCtrl.push(MentoringPage);
   }

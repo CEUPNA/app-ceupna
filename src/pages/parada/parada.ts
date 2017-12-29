@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
 import { TransportPage } from '../transport/transport';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -13,11 +13,11 @@ import { Http } from '@angular/http';
 export class ParadaPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AppInit: AppInit, public http: HttpClient) {
 
   }
 
   OpenTransport(){
   this.navCtrl.push(TransportPage);
   }
-  }
+}
