@@ -6,9 +6,9 @@
 
 <ion-content padding class='bgContent'>
   <ion-row wrap>
-    <ion-col width-50 *ngFor="let recurso of recursos" (click)="OpenSingleTic(recurso.id)">
-      <img style="max-width: 85%;padding-bottom:15px;" src="{{recurso.icon}}">
-      <p style="text-align:center">{{recurso.name}}</p>
+    <ion-col width-50 *ngFor="let resource of api.ticResources" (click)="OpenSingleTic(resource.id)">
+      <img style="max-width: 85%;padding-bottom:15px;" src="{{resource.icon}}">
+      <p style="text-align:center">{{resource.name}}</p>
     </ion-col>
   </ion-row>
 </ion-content>

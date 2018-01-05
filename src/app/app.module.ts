@@ -28,6 +28,7 @@ import { mentSingleSubject } from '../pages/mentSingleSubject/mentSingleSubject'
 import { NewPage } from '../pages/new/new';
 import { TransportPage } from '../pages/transport/transport';
 import { ParadaPage } from '../pages/parada/parada';
+import { ApiCeupnaProvider } from '../providers/api-ceupna/api-ceupna';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,10 @@ import { ParadaPage } from '../pages/parada/parada';
     TransportPage,
     ParadaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Storage,
+    ApiCeupnaProvider]
 })
 
 export class AppModule {}

@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AppInit } from '../../providers/app-init';
 import { TicPage } from '../tic/tic';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
 
 
 
