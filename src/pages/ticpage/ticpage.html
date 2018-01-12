@@ -5,8 +5,8 @@
 
 
 <ion-content padding class='bgContent'>
-<h3 [innerHTML]='name' style="width: 85%;float: right;text-align: center;"></h3>
-<img style="max-width: 15%;float: left;padding-bottom:15px;" src="{{icon}}">
-<p [innerHTML]='description' style="display:inline-block"></p>
-<a style="display:inline-block" href="{{enlace}}">{{ "MORE INFO IN WEBSITE" | translate }}</a>
+  <h3 [innerHTML]='ticResource.name' style="width: 85%;float: right;text-align: center;"></h3>
+  <img style="max-width: 15%;float: left;padding-bottom:15px;" src="{{ticResource.icon}}">
+  <p [innerHTML]='ticResource.description' style="display:inline-block"></p>
+  <a style="display:inline-block" href="{{ticResource.web}}">{{ "MORE INFO IN WEBSITE" | translate }}</a>
 </ion-content>
